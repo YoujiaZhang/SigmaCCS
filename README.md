@@ -29,8 +29,7 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
     ps.numThreads = 0
     ps.useRandomCoords = True
     re = AllChem.EmbedMultipleConfs(mol, numConfs = 1, params = ps)
-
-2.保存相关参数。例如：adduct set, atoms set, 
+2.保存相关参数。例如：adduct set, atoms set, Minimum value in atomic coordinates, Maximum value in atomic coordinates
 3. 
 
     DataSet = MyDataset(features, adj, edge_features, ccs)
