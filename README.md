@@ -19,8 +19,22 @@ We recommend to use [conda](https://conda.io/docs/user-guide/install/download.ht
 ## 数据预处理
 SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见GraphData.py      
 
-    DataSet = MyDataset(features, **adj**, edge_features, ccs)
+1. 生成分子3D构象。使用[rdkit.Chem.rdDistGeom.EmbedMultipleConfs](https://www.rdkit.org/docs/source/rdkit.Chem.rdDistGeom.html?highlight=embedmultipleconfs#rdkit.Chem.rdDistGeom.EmbedMultipleConfs)
+2. 保存相关参数。例如：adduct set, atoms set, 
+3. 
 
+    DataSet = MyDataset(features, adj, edge_features, ccs)
+    
+*Optionnal args *
+- features : Node feature matrix
+- adj : Adjacency matrix
+- edge_features : Edge feature matrix
+- ccs : CCS of molecules
+
+## 模型训练
+根据自己的训练数据集，使用训练模型
 
 ## CCS预测
 将Graph和Adduct输入已经训练好的SiGMA模型中，即可得到该分子的CCS预测值。
+
+
