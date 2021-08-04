@@ -29,21 +29,38 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
     ps.numThreads = 0
     ps.useRandomCoords = True
     re = AllChem.EmbedMultipleConfs(mol, numConfs = 1, params = ps)
-2.保存相关参数.例如：adduct set, atoms set, Minimum value in atomic coordinates, Maximum value in atomic coordinates.     
+2.保存相关参数.例如：adduct set, atoms set, Minimum value in atomic coordinates, Maximum value in atomic coordinates. 
+
 3.生成Graph数据集. 生成用于构造Graph的三个矩阵:(1)node feature matrix, (2)adjacency matrix, (3)edge feature matrix.    
 
+    adj, features, edge_features = convertToGraph(smiles, Coordinate, All_Atoms)
     DataSet = MyDataset(features, adj, edge_features, ccs)
-    
-*Optionnal args *
+*Optionnal args*
+- All_Atoms : The set of all elements in the dataset
+- Coordinate : Array of coordinates of all molecules
 - features : Node feature matrix
 - adj : Adjacency matrix
 - edge_features : Edge feature matrix
-- ccs : CCS of molecules
 
 ## 模型训练
-根据自己的训练数据集，使用训练模型
+根据自己的训练数据集，使用训练模型。
+
+    Model_train(ifile, ParameterPath, ofile, ofileDataPath, EPOCHS, BATCHS, Vis, All_Atoms=[], adduct_SET=[])
+*Optionnal args*
+- ifile : File path for storing the data of smiles and adduct.
+- ofile : File path where the model is stored.
+- ParameterPath : Save path of related data parameters.
+- ofileDataPath : File path for storing model parameter data.
 
 ## CCS预测
 将Graph和Adduct输入已经训练好的SiGMA模型中，即可得到该分子的CCS预测值。
 
+    Model_prediction(ifile, ParameterPath, mfileh5, ofile, Isevaluate = 0)
+*Optionnal args*
+- ifile : File path for storing the data of smiles and adduct
+- ParameterPath : File path for storing model parameter data
+- mfileh5 : File path where the model is stored
+- ofile : Path to save ccs prediction values
 
+## Usage
+The example codes for usage is included in the Usage.ipynb
