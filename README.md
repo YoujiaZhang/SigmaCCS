@@ -17,8 +17,9 @@ We recommend to use [conda](https://conda.io/docs/user-guide/install/download.ht
 - [spektral](https://graphneural.network/) 1.0.5
 
 ## 数据预处理
-SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见GraphData.py
-    DataSet = MyDataset(features, adj, edge_features, ccs)
+SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见GraphData.py      
+
+    DataSet = MyDataset(features, **adj**, edge_features, ccs)
 
 
 ## CCS预测
