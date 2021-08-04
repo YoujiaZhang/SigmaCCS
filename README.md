@@ -20,6 +20,16 @@ We recommend to use [conda](https://conda.io/docs/user-guide/install/download.ht
 SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见GraphData.py      
 
 1.生成分子3D构象。使用[rdkit.Chem.rdDistGeom.EmbedMultipleConfs](https://www.rdkit.org/docs/source/rdkit.Chem.rdDistGeom.html?highlight=embedmultipleconfs#rdkit.Chem.rdDistGeom.EmbedMultipleConfs)
+
+    mol = Chem.MolFromSmiles(smiles)
+    mol = Chem.AddHs(mol)
+    ps = AllChem.ETKDGv3()
+    ps.randomSeed = -1
+    ps.maxAttempts = 1
+    ps.numThreads = 0
+    ps.useRandomCoords = True
+    re = AllChem.EmbedMultipleConfs(mol, numConfs = 1, params = ps)
+
 2.保存相关参数。例如：adduct set, atoms set, 
 3. 
 
