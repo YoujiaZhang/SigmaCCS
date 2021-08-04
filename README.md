@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO.png" width=550 height=150>
+<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO.png" width=580 height=150>
 </div>
 
 ## SiGMA
@@ -18,5 +18,8 @@ We recommend to use [conda](https://conda.io/docs/user-guide/install/download.ht
 
 ## 数据预处理
 SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见GraphData.py
+    DataSet = MyDataset(features, adj, edge_features, ccs)
+
 
 ## CCS预测
+将Graph和Adduct输入已经训练好的SiGMA模型中，即可得到该分子的CCS预测值。
