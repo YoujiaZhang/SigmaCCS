@@ -1,37 +1,22 @@
-## SiGMA
-This is the repository of codes for the paper entitled "[Predicting Molecular Fingerprint from Electron-Ionization Mass Spectrum with Deep Neural Networks](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01450)". This repository only contains the source codes without any data or pretrained models, due to the models were trained by NIST dataset.
-
 <div align="center">
-<img src="https://github.com/hcji/DeepEI/blob/master/figure.png">
+<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO.png" width=550 height=150>
 </div>
 
-### Depends:
-[python3](https://www.python.org/)     
-[rdkit](https://rdkit.org/)     
-[tensorflow](https://www.tensorflow.org)     
+## SiGMA
 
-optinal:    
-[pycdk](https://github.com/hcji/pycdk)      
-[smiles_to_onehot](https://gitee.com/hcji/smiles_to_onehot)    
+这是论文 *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.* 的代码库。   
+其中包括：
+- ECC.py
+- GraphData.py
+- model.py
+### Package required: 
+We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html) and pip.
+- [python3](https://www.python.org/) 3.7.7
+- [rdkit](https://rdkit.org/) 2020.09.5     
+- [tensorflow](https://www.tensorflow.org) 2.4.0
+- [spektral](https://graphneural.network/) 1.0.5
 
-### Data preprocess
+## 数据预处理
+SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见GraphData.py
 
-Data preprocess scripts are used for extracting compound information of NIST into numpy object. They are included in the *scripts/read.py* , including gathering the SMILES, exact masses, retention indices, Morgan fingerprints, molecular descriptors and mass spectra.
-
-### Training the model
-
-DeepEI contain two main parts of models: 1. Predicting molecular fingerprint from EI-MS (*Fingerprint* folder); 2. Predicting retention index from structure (*retention* folder). Each folder contains the codes for data pretreatment, model training and model selection. For FP prediction, we compared for models, which are MLP, XGBoost, LR and PLS-DA. For RI prediction, we compared single-channel CNN, multi-channel CNN and MLP.
-
-### Prediction
-
-The main functions of predication are included in the *DeepEI* folder. *predict_RI* function takes SMILES as input and predicts the corresponding retention index. *predict_fingerprint* function takes mass spectrum as input and predicts the corresponding fingerprints. 
-
-### Comparison
-
-The *Discussion* folder contains the scripts for evaluating the identification performance, and comparing with [NEIMS](https://github.com/brain-research/deep-molecular-massspec) package. The corresponding results are also included. We compared DeepEI, NEIMS and their combination.
-
-### Usage
-
-The example codes for usage is included in the *Usage.ipynb*
-
-**Contact:** ji.hongchao@foxmail.com
+## CCS预测
