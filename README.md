@@ -12,7 +12,7 @@
 - GraphData.py
 - model.py
 ### Package required: 
-We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html) and pip.
+We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html) and [pip](https://pypi.org/project/pip/).
 - [python3](https://www.python.org/) 3.7.7
 - [rdkit](https://rdkit.org/) 2020.09.5     
 - [tensorflow](https://www.tensorflow.org) 2.4.0
