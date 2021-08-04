@@ -1,5 +1,7 @@
 <div align="center">
-<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO.png" width=580 height=150>
+
+<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO.png" width=580 height=150>    
+<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO1.png" width=150 height=150>
 </div>
 
 ## SiGMA
