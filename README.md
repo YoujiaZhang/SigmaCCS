@@ -31,7 +31,7 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
     ps.numThreads = 0
     ps.useRandomCoords = True
     re = AllChem.EmbedMultipleConfs(mol, numConfs = 1, params = ps)
-    re = AllChem.MMFFOptimizeMoleculeConfs(mol,  numThreads = 0)
+    re = AllChem.MMFFOptimizeMoleculeConfs(mol, numThreads = 0)
 2.保存相关参数.例如：adduct set, atoms set, Minimum value in atomic coordinates, Maximum value in atomic coordinates. 
 
 3.生成Graph数据集. 生成用于构造Graph的三个矩阵:(1)node feature matrix, (2)adjacency matrix, (3)edge feature matrix.    
