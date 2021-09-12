@@ -46,8 +46,8 @@ def Model_prediction(ifile,ParameterPath,mfileh5,ofile,Isevaluate = 0):
     df.to_csv(ofile,index=False)
     # print('## CCS predicted completed')
     if Isevaluate == 1:
-        Bais(ccs,re)
-    return Bais(ccs,re)
+        re_Bais = Bais(ccs,re)
+    return re_Bais
 
 def Model_train(ifile, ParameterPath, ofile, EPOCHS, BATCHS, Vis, All_Atoms=[], adduct_SET=[]):
     '''
