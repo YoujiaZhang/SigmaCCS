@@ -277,15 +277,3 @@ class MyDataset(Dataset):
                       a = self.adj[i],
                       e = self.edge_features[i],
                       y = float(self.ccs[i])) for i in range(len(self.adj))]
-    
-def ReadGraphDataSet(ofileDataPath):
-    '''
-    Save the processed trainable data
-    '''
-    features = np.load(ofileDataPath+"features.npy",allow_pickle=True)
-    adj = np.load(ofileDataPath+"adj.npy",allow_pickle=True)
-    edge_features = np.load(ofileDataPath+"edge_features.npy",allow_pickle=True)
-    ccs = np.load(ofileDataPath+"ccs.npy",allow_pickle=True)
-    DataSet = MyDataset(features, adj, edge_features, ccs)
-    adduct = np.load(ofileDataPath+"Adduct.npy",allow_pickle=True)
-    return DataSet, adduct

@@ -98,14 +98,14 @@ def predict(Model,adduct_SET,dataset,adduct):
         inputs, target = batch
         predictions = Model(inputs, training=False) # predict
         pred = np.array(predictions[0])
-#         print(pred[0],target[0],(abs(pred[0]-target[0])/target[0]*100))
-        print((abs(pred[0]-target[0])/target[0]))
+        # print(pred[0],target[0],(abs(pred[0]-target[0])/target[0]*100))
+        # print((abs(pred[0]-target[0])/target[0]))
         y_pred.append(pred[0])
         y_true.append(target[0])
         count += 1
     return y_pred
 
-def Mymodel(DataSet):
+def Mymodel(DataSet,adduct_SET):
     '''
     * Constructing SiGMA model
     *
