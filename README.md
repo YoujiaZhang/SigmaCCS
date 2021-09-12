@@ -50,7 +50,7 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - Minimum value in atomic coordinates   
 - Maximum value in atomic coordinates   
 
-**3.** 生成Graph数据集. 生成用于构造Graph的三个矩阵:(1)node feature matrix, (2)adjacency matrix, (3)edge feature matrix.    
+**3.** 生成Graph数据集. 生成用于构造Graph的三个矩阵:(1) *node feature matrix*, (2) *adjacency matrix*, (3) *edge feature matrix*.    
 
     adj, features, edge_features = convertToGraph(smiles, Coordinate, All_Atoms)
     DataSet = MyDataset(features, adj, edge_features, ccs)
@@ -82,4 +82,4 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - ofile : Path to save ccs prediction values
 
 ## Usage
-The example codes for usage is included in the test.ipynb
+The example codes for usage is included in the [test.ipynb](https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/test.ipynb)
