@@ -8,7 +8,7 @@
 
 这是论文 *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.* 的代码库。   
 其中包括：
-- ECC.py
+- sigma.py
 - GraphData.py
 - model.py
 - *data Folder*:  
@@ -82,4 +82,4 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - ofile : Path to save ccs prediction values
 
 ## Usage
-The example codes for usage is included in the [test.ipynb](https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/test.ipynb)
+The example codes for usage is included in the [test.ipynb](main/test.ipynb)
