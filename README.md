@@ -4,7 +4,7 @@
 <img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO1.png" width=150 height=150>
 </div>
 
-## SiGMA
+## SigmaCCS
 
 这是论文 *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.* 的代码库。   
 其中包括：
