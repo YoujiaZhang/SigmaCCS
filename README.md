@@ -46,7 +46,7 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - edge_features : Edge feature matrix
 
 ## 模型训练
-根据自己的训练数据集，使用训练模型。
+根据自己的训练数据集，训练模型。
 
     Model_train(ifile, ParameterPath, ofile, ofileDataPath, EPOCHS, BATCHS, Vis, All_Atoms=[], adduct_SET=[])
 *Optionnal args*
@@ -66,4 +66,4 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - ofile : Path to save ccs prediction values
 
 ## Usage
-The example codes for usage is included in the Usage.ipynb
+The example codes for usage is included in the test.ipynb
