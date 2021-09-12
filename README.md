@@ -6,8 +6,8 @@
 
 ## SigmaCCS
 
-这是论文 *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.* 的代码库。   
-其中包括：
+This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*.  
+It includes:
 - sigma.py
 - GraphData.py
 - model.py
@@ -26,10 +26,10 @@ We recommend to use [conda](https://conda.io/docs/user-guide/install/download.ht
 - [tensorflow](https://www.tensorflow.org) 2.4.0
 - [spektral](https://graphneural.network/) 1.0.5
 
-## 数据预处理
-SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字符串转化为Graph。 相关方法见`GraphData.py`      
+## Data pre-processing
+SigmaCCS is a model for predicting CCS based on graph neural networks, so we need to convert SMILES strings to Graph. The related method is shown in `GraphData.py`      
 
-**1.** 生成分子3D构象.   
+**1.** Generate 3D conformations of molecules.   
 
     mol = Chem.MolFromSmiles(smiles)
     mol = Chem.AddHs(mol)
@@ -44,13 +44,13 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - [EmbedMultipleConfs](https://www.rdkit.org/docs/source/rdkit.Chem.rdDistGeom.html?highlight=embedmultipleconfs#rdkit.Chem.rdDistGeom.EmbedMultipleConfs), use distance geometry to obtain multiple sets of coordinates for a molecule.
 - [MMFFOptimizeMoleculeConfs](https://www.rdkit.org/docs/source/rdkit.Chem.rdForceFieldHelpers.html?highlight=mmffoptimizemoleculeconfs#rdkit.Chem.rdForceFieldHelpers.MMFFOptimizeMoleculeConfs), uses MMFF to optimize all of a molecule’s conformations      
 
-**2.** 保存相关参数.For details, see`parameter.py`.例如:    
+**2.** Save relevant parameters. For details, see`parameter.py`.    
 - adduct set  
 - atoms set   
 - Minimum value in atomic coordinates   
 - Maximum value in atomic coordinates   
 
-**3.** 生成Graph数据集. 生成用于构造Graph的三个矩阵:(1) *node feature matrix*, (2) *adjacency matrix*, (3) *edge feature matrix*.    
+**3.** Generate the Graph dataset. Generate the three matrices used to construct the Graph: (1) *node feature matrix*, (2) *adjacency matrix*, (3) *edge feature matrix*.    
 
     adj, features, edge_features = convertToGraph(smiles, Coordinate, All_Atoms)
     DataSet = MyDataset(features, adj, edge_features, ccs)
@@ -61,8 +61,8 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - adj : Adjacency matrix
 - edge_features : Edge feature matrix
 
-## 模型训练
-根据自己的训练数据集，训练模型。
+## Model Training
+Train the model based on your own training dataset.
 
     Model_train(ifile, ParameterPath, ofile, ofileDataPath, EPOCHS, BATCHS, Vis, All_Atoms=[], adduct_SET=[])
 *Optionnal args*
@@ -71,8 +71,8 @@ SiGMA是基于图神经网络预测CCS的模型，所以我们需要将SMILES字
 - ParameterPath : Save path of related data parameters.
 - ofileDataPath : File path for storing model parameter data.
 
-## CCS预测
-将Graph和Adduct输入已经训练好的SiGMA模型中，即可得到该分子的CCS预测值。
+## Predicting CCS
+The CCS prediction of the molecule is obtained by inputting Graph and Adduct into the already trained SigmaCCS model.
 
     Model_prediction(ifile, ParameterPath, mfileh5, ofile, Isevaluate = 0)
 *Optionnal args*
