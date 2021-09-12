@@ -26,9 +26,9 @@ def Bais(y,r):
     '''
     RelativeError = [abs(y[i]-r[i])/y[i] for i in range(len(y))]
     R2_Score = r2_score(r,y)
-    print("R2 Score :", R2_Score, '\n')
-    print("Median Relative Error :", np.median(RelativeError) * 100, '%')
-    print("Mean Relative Error :", np.mean(RelativeError) * 100, '%')
+    # print("R2 Score :", R2_Score, '\n')
+    # print("Median Relative Error :", np.median(RelativeError) * 100, '%')
+    # print("Mean Relative Error :", np.mean(RelativeError) * 100, '%')
     return R2_Score, np.median(RelativeError) * 100
 
 def one_of_k_encoding_unk(x, allowable_set):
