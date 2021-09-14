@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/icecreamZjy/ECC-predicts-CCS/blob/main/LOGO.png" width=580 height=150>    
+<img src="logo.png" width=967 height=200>    
 </div>
 
 ## SigmaCCS
