@@ -83,3 +83,21 @@ The CCS prediction of the molecule is obtained by inputting Graph and Adduct int
 
 ## Usage
 The example codes for usage is included in the [test.ipynb](main/test.ipynb)
+
+## Others
+- analyze the feature importance
+- visualize the learned representation with UMAP
+- investigate of the relationship between SigmaCCS and theoretical calculation
+- *data*:
+    - Attribute importance data
+        - Attribute importance
+        - Coordinate data 
+    - UMAP data
+        - Coordinate data
+        - Sampled data + training data.csv
+        - Sampled data + training data.npy
+        - Sampled data + training data-UMAP-EUC-60.npy
+    - theoretical calculation data
+        - Coordinate data
+        - data.csv
+        - LJ_data.csv
