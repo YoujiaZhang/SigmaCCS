@@ -115,6 +115,6 @@ The following files are in the `slurm/` folder
 - multiple_job.sh (Batch generation of slurm script files)
 - normal_job.sh (Submit the slurm script for the mp.py file)
 
-### information of maintainer
+## information of maintainer
 - zmzhang@csu.edu.cn
 - youjiazhang126@163.com
