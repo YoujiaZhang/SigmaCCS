@@ -26,6 +26,8 @@ We recommend to use [conda](https://conda.io/docs/user-guide/install/download.ht
 - [tensorflow](https://www.tensorflow.org) 2.4.0
 - [spektral](https://graphneural.network/) 1.0.5
 
+By using the `requirements/conda/requirements.txt`, `requirements/pip/requirements.txt` file, it will update all your packages to the correct version.
+
 ## Data pre-processing
 SigmaCCS is a model for predicting CCS based on graph neural networks, so we need to convert SMILES strings to Graph. The related method is shown in `GraphData.py`           
 
@@ -115,6 +117,6 @@ The following files are in the `slurm/` folder
 - multiple_job.sh (Batch generation of slurm script files)
 - normal_job.sh (Submit the slurm script for the mp.py file)
 
-## information of maintainer
+## Information of maintainer
 - zmzhang@csu.edu.cn
 - youjiazhang126@163.com
