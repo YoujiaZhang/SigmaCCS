@@ -5,7 +5,7 @@
 
 ## SigmaCCS
 
-This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*  
+This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*   
 It includes:
 - sigma.py
 - GraphData.py
@@ -18,6 +18,7 @@ It includes:
     - model.h5
 - *parameter Folder*:
     - parameter.pkl 
+Our paper also uses the [GNN-RT](https://github.com/Qiong-Yang/GNN-RT).
 
 ### Package required: 
 We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html) and [pip](https://pypi.org/project/pip/).
@@ -84,13 +85,14 @@ The CCS prediction of the molecule is obtained by inputting Graph and Adduct int
 - ofile : Path to save ccs prediction values
 
 ## Usage
-The example codes for usage is included in the [test.ipynb](main/test.ipynb)
+The example codes for usage is included in the [test.ipynb](test.ipynb)
 
 ## Others
 The following files are in the `others/` folder
-- [Attribute Analysis.ipynb](main/test.ipynb). analyze the attribute importance
-- [UMAP.ipynb](main/test.ipynb). visualize the learned representation with UMAP
-- [theoretical calculation.ipynb](main/test.ipynb). investigate of the relationship between SigmaCCS and theoretical calculation
+- [Attribute Analysis.ipynb](others/Attribute%20Analysis.ipynb). analyze the attribute importance
+- [UMAP.ipynb](others/UMAP.ipynb). visualize the learned representation with UMAP
+- [UMAPDataset.py](others/UMAPDataset.py). for generating graph datasets.
+- [theoretical calculation.ipynb](others/theoretical%20calculation.ipynb). investigate of the relationship between SigmaCCS and theoretical calculation
 - *model*:
     - model.h5
 - *data*:
