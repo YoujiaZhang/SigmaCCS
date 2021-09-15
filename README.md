@@ -106,7 +106,7 @@ The following files are in the `others/` folder
         - LJ_data.csv (Get the LJ interaction parameters of different elements according to LJ_data.csv)
 
 ### Package required: 
-- [UMAP](https://github.com/lmcinnes/umap)
+- [UMAP](https://github.com/lmcinnes/umap) 0.5.1
 
 ## Slurm script
 slurm script for generating CCS of PubChem in HPC cluster.
@@ -114,3 +114,7 @@ The following files are in the `slurm/` folder
 - mp.py
 - multiple_job.sh (Batch generation of slurm script files)
 - normal_job.sh (Submit the slurm script for the mp.py file)
+
+### information of maintainer
+- zmzhang@csu.edu.cn
+- youjiazhang126@163.com
