@@ -1,0 +1,4 @@
+spektral==1.0.5
+tensorflow-gpu==2.4.0
+tqdm==4.59.0
+umap-learn==0.5.1
