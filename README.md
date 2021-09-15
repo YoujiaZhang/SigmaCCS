@@ -61,7 +61,7 @@ SigmaCCS is a model for predicting CCS based on graph neural networks, so we nee
 - adj : Adjacency matrix
 - edge_features : Edge feature matrix
 
-## Model Training
+## Model training
 Train the model based on your own training dataset.
 
     Model_train(ifile, ParameterPath, ofile, ofileDataPath, EPOCHS, BATCHS, Vis, All_Atoms=[], adduct_SET=[])
@@ -85,19 +85,29 @@ The CCS prediction of the molecule is obtained by inputting Graph and Adduct int
 The example codes for usage is included in the [test.ipynb](main/test.ipynb)
 
 ## Others
-- analyze the feature importance
-- visualize the learned representation with UMAP
-- investigate of the relationship between SigmaCCS and theoretical calculation
+The following files are in the `others/` folder
+- [Attribute Analysis.ipynb](main/test.ipynb). analyze the attribute importance
+- [UMAP.ipynb](main/test.ipynb). visualize the learned representation with UMAP
+- [theoretical calculation.ipynb](main/test.ipynb). investigate of the relationship between SigmaCCS and theoretical calculation
+- *model*:
+    - model.h5
 - *data*:
-    - Attribute importance data
-        - Attribute importance
-        - Coordinate data 
-    - UMAP data
-        - Coordinate data
+    - *Attribute importance data*
+        - *Attribute importance* (data.csv)
+        - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
+    - *UMAP data*
+        - *Coordinate data* (Store the 3D coordinate data of all molecules in Sampled data + training data.csv)
         - Sampled data + training data.csv
-        - Sampled data + training data.npy
+        - Sampled data + training data.npy (Molecular vectors of all molecules)
         - Sampled data + training data-UMAP-EUC-60.npy
-    - theoretical calculation data
-        - Coordinate data
+    - *theoretical calculation data*
+        - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
         - data.csv
-        - LJ_data.csv
+        - LJ_data.csv (Get the LJ interaction parameters of different elements according to LJ_data.csv)
+
+## Slurm script
+slurm script for generating CCS of PubChem in HPC cluster.
+The following files are in the `slurm/` folder
+- mp.py
+- multiple_job.sh
+- normal_job.sh
