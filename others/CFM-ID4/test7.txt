@@ -1,0 +1,10 @@
+6708708 C[C@]12CC[C@@H]([C@@](C1CC[C@@]3(C2CC=C4[C@]3(CC[C@@]5(C4CC(CC5)(C)C)C(=O)O)C)C)(C)CO)O
+6918774 C[C@@H]1CC[C@@]2(CC[C@@]3(C(=CC[C@H]4[C@]3(CC[C@@H]5[C@@]4(C[C@H]([C@@H](C5(C)C)O)O)C)C)[C@@H]2[C@H]1C)C)C(=O)O
+7163258 C[C@@]12CC[C@@H]3[C@@]([C@@H]1CC=C4[C@]2(CC[C@@]5([C@@H]4CC(CC5)(C)C)C(=O)O)C)(C[C@H]([C@@H](C3(C)C)O)O)C
+7163260 C[C@@]12CC[C@@H]3[C@@]([C@H]1CC=C4[C@]2(CC[C@@]5([C@@H]4CC(CC5)(C)C)C(=O)O)C)(C[C@H]([C@@H](C3(C)C)O)O)C
+9804877 C[C@@H]1CC[C@@]2(CC[C@@]3(C(=CC[C@H]4[C@]3(CC[C@@H]5[C@@]4(CC[C@@H]([C@@]5(C)CO)O)C)C)C2[C@H]1C)C)C(=O)O
+9847658 C[C@@H]1CC[C@@]2(CC[C@@]3(C(=CC[C@H]4[C@]3(CC[C@@H]5[C@@]4(C[C@H]([C@@H](C5(C)C)O)O)C)C)C2[C@H]1C)C)C(=O)O
+9890992 CC(=CCC[C@H]([C@H]1[C@@H](C[C@@]2([C@@]1(CCC3=C2CC[C@@H]4[C@@]3(CC[C@@H](C4(C)C)O)C)C)C)O)C(=O)O)C
+9934518 C[C@]12CC[C@@H]([C@@]([C@@H]1CC[C@@]3(C2=CC=C4[C@]3(C[C@@H]([C@@]5([C@H]4CC(CC5)(C)C)CO)O)C)C)(C)CO)O
+9934519 C[C@@]12CCC3[C@@](C1CC=C4[C@]2(CC[C@@]5(C4CC(CC5)(C)C)C(=O)O)C)(C[C@H]([C@@H](C3(C)C)O)O)C
+9956481 C[C@@H]1CC[C@@]2(CC[C@@]3(C(=CC[C@H]4[C@]3(CC[C@@H]5[C@@]4(C[C@H]([C@H](C5(C)C)O)O)C)C)C2[C@H]1C)C)C(=O)O
