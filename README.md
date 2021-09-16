@@ -120,3 +120,4 @@ The following files are in the `slurm/` folder
 ## Information of maintainer
 - zmzhang@csu.edu.cn
 - youjiazhang126@163.com
+- renfengguo05@foxmail.com
