@@ -50,7 +50,8 @@ SigmaCCS is a model for predicting CCS based on graph neural networks, so we nee
 - Minimum value in atomic coordinates   
 - Maximum value in atomic coordinates   
 
-**3.** Generate the Graph dataset. Generate the three matrices used to construct the Graph: (1) *node feature matrix*, (2) *adjacency matrix*, (3) *edge feature matrix*.       
+**3.** Generate the Graph dataset. Generate the three matrices used to construct the Graph:    
+(1) *node feature matrix*, (2) *adjacency matrix*, (3) *edge feature matrix*.       
 
     adj, features, edge_features = convertToGraph(smiles, Coordinate, All_Atoms)
     DataSet = MyDataset(features, adj, edge_features, ccs)
@@ -93,7 +94,7 @@ The following files are in the `others/` folder
 - [Filtering.ipynb](others/Filtering.ipynb). Filtering of target unknown molecules based on the CCS and *mz* of the molecules
 - *CFM-ID4*. the code for generating MS/MS spectra with CFM-ID 4.0.
 - *GNN-RT*:
-    - README.md
+    - [README.md](others/GNN-RT/README.md)
 - *model*:
     - model.h5
 - *data*:
@@ -109,6 +110,8 @@ The following files are in the `others/` folder
         - data.csv
         - LJ_data.csv (Get the LJ interaction parameters of different elements according to LJ_data.csv)
         - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
+    - *Filtering data* 
+        - data.csv 
 
 ### Package required: 
 - [UMAP](https://github.com/lmcinnes/umap) 0.5.1
