@@ -91,7 +91,7 @@ The following files are in the `others/` folder
 - [UMAPDataset.py](others/UMAPDataset.py). for generating graph datasets.
 - [theoretical calculation.ipynb](others/theoretical%20calculation.ipynb). investigate of the relationship between SigmaCCS and theoretical calculation
 - [Filtering.ipynb](others/Filtering.ipynb). Filtering of target unknown molecules based on the CCS and *mz* of the molecules
-- *[CFM-ID 4.0]*(others/CFM-ID4). the code for generating MS/MS spectra with CFM-ID 4.0.
+- *CFM-ID4*. the code for generating MS/MS spectra with CFM-ID 4.0.
 - *GNN-RT*:
     - README.md
 - *model*:
@@ -101,14 +101,14 @@ The following files are in the `others/` folder
         - *Attribute importance* (data.csv)
         - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
     - *UMAP data*
-        - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
         - data.csv
         - data_molvec.npy (Molecular vectors of all molecules)
         - data-UMAP-EUC-60.npy
-    - *theoretical calculation data*
         - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
+    - *theoretical calculation data*
         - data.csv
         - LJ_data.csv (Get the LJ interaction parameters of different elements according to LJ_data.csv)
+        - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
 
 ### Package required: 
 - [UMAP](https://github.com/lmcinnes/umap) 0.5.1
