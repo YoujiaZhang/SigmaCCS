@@ -1,7 +1,4 @@
-<div align="center">
-
-<img src="logo.png" width=870 height=180>    
-</div>
+<img src="logo.png" width:100px >    
 
 ## SigmaCCS
 
