@@ -2,8 +2,9 @@
 
 ## SigmaCCS
 
-This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*   
-It includes:
+This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*     
+We developed a model named SigmaCCS which can be used to predict CCS of compounds,and a [dataset](https://zenodo.org/record/5501674#.YUMnE44zZPZ) including CCS values of ~90,000,000 molecules from Pubchem was formed.For each molecules,there are "Pubchem ID","SMILES","InChi","Inchikey","Molecular Weight","Exact Mass","Formula"and predicted CCS values of three adduct ion type ([M+H]+,[M-H]-,[M+Na]+). Our paper also uses the [GNN-RT](https://github.com/Qiong-Yang/GNN-RT).
+
 - sigma.py
 - GraphData.py
 - model.py
@@ -15,8 +16,6 @@ It includes:
     - model.h5
 - *parameter Folder*:
     - parameter.pkl 
-
-Our paper also uses the [GNN-RT](https://github.com/Qiong-Yang/GNN-RT).
 
 ### Package required: 
 We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html) and [pip](https://pypi.org/project/pip/).
@@ -91,6 +90,10 @@ The following files are in the `others/` folder
 - [UMAP.ipynb](others/UMAP.ipynb). visualize the learned representation with UMAP
 - [UMAPDataset.py](others/UMAPDataset.py). for generating graph datasets.
 - [theoretical calculation.ipynb](others/theoretical%20calculation.ipynb). investigate of the relationship between SigmaCCS and theoretical calculation
+- [Filtering.ipynb](others/Filtering.ipynb). Filtering of target unknown molecules based on the CCS and *mz* of the molecules
+- *[CFM-ID 4.0]*(others/CFM-ID4). the code for generating MS/MS spectra with CFM-ID 4.0.
+- *GNN-RT*:
+    - README.md
 - *model*:
     - model.h5
 - *data*:
@@ -98,10 +101,10 @@ The following files are in the `others/` folder
         - *Attribute importance* (data.csv)
         - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
     - *UMAP data*
-        - *Coordinate data* (Store the 3D coordinate data of all molecules in Sampled data + training data.csv)
-        - Sampled data + training data.csv
-        - Sampled data + training data.npy (Molecular vectors of all molecules)
-        - Sampled data + training data-UMAP-EUC-60.npy
+        - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
+        - data.csv
+        - data_molvec.npy (Molecular vectors of all molecules)
+        - data-UMAP-EUC-60.npy
     - *theoretical calculation data*
         - *Coordinate data* (Store the 3D coordinate data of all molecules in data.csv)
         - data.csv
