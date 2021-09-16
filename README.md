@@ -2,8 +2,7 @@
 
 ## SigmaCCS
 
-This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*     
-We developed a model named SigmaCCS which can be used to predict CCS of compounds,and a [dataset](https://zenodo.org/record/5501674#.YUMnE44zZPZ) including CCS values of ~90,000,000 molecules from Pubchem was formed.For each molecules,there are "Pubchem ID","SMILES","InChi","Inchikey","Molecular Weight","Exact Mass","Formula"and predicted CCS values of three adduct ion type ([M+H]+,[M-H]-,[M+Na]+). Our paper also uses the [GNN-RT](https://github.com/Qiong-Yang/GNN-RT).
+This is the code base for the paper *Ion Mobility Collision Cross Section Prediction Using **S**tructure **I**ncluded **G**raph **M**erged with **A**dduct.*  We developed a model named SigmaCCS which can be used to predict CCS of compounds,and a [dataset](https://zenodo.org/record/5501674#.YUMnE44zZPZ) including CCS values of ~90,000,000 molecules from Pubchem was formed.For each molecules,there are "Pubchem ID","SMILES","InChi","Inchikey","Molecular Weight","Exact Mass","Formula"and predicted CCS values of three adduct ion type ([M+H]+,[M-H]-,[M+Na]+). Our paper also uses the [GNN-RT](https://github.com/Qiong-Yang/GNN-RT).
 
 - sigma.py
 - GraphData.py
